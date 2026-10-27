@@ -29,6 +29,12 @@ namespace Biblioteca
             Status = status;    
         }
 
+
+        public override string ToString()
+        {
+            return $"{Titulo}-{Autor}-{AnoPublicacao}-{Isbn}";
+        }
+
         public Bibliotecario Bibliotecario { get; set; }
 
         public Emprestimo Emprestimo { get; set; }
