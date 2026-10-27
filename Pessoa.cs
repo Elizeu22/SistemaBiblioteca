@@ -20,5 +20,16 @@ namespace Biblioteca
             this.Email = email; 
         }
 
+
+        public string GetDados()
+        {
+            return $"Nome:{Nome}, Email:{Email}";
+        }
+
+        public override string ToString() 
+        {
+            return $"{Nome}-{Email}";
+        }
+
     }
 }
