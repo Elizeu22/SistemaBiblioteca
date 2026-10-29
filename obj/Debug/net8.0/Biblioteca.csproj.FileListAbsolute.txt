@@ -12,3 +12,4 @@ C:\Projetos-C#\Sistema-Biblioteca\Biblioteca\obj\Debug\net8.0\refint\Biblioteca.
 C:\Projetos-C#\Sistema-Biblioteca\Biblioteca\obj\Debug\net8.0\Biblioteca.pdb
 C:\Projetos-C#\Sistema-Biblioteca\Biblioteca\obj\Debug\net8.0\Biblioteca.genruntimeconfig.cache
 C:\Projetos-C#\Sistema-Biblioteca\Biblioteca\obj\Debug\net8.0\ref\Biblioteca.dll
+C:\Projetos-C#\Sistema-Biblioteca\Biblioteca\obj\Debug\net8.0\Biblioteca.sourcelink.json
