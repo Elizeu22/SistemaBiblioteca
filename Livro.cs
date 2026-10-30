@@ -40,14 +40,18 @@ namespace Biblioteca
         public Emprestimo Emprestimo { get; set; }
 
 
-        public void MarcarComoEmprestado()
+        public bool MarcarComoEmprestado()
         {
-            Status = false; 
+            Status = false;
+
+            return Status;
         }
 
-        public void MarcarComoDevolvido()
+        public bool MarcarComoDevolvido()
         {
             Status = true;
+
+            return Status;
         }
 
     }
