@@ -8,12 +8,12 @@ namespace Biblioteca
 {
     public abstract class Pessoa
     {
-        private int Id { set; get; } = 0;
+        public int Id { private set; get; } = 0;
 
 
-        private string Nome { set; get; } = "";
+        public string Nome { set; private get; } = "";
 
-        private string Email { set; get; } = "";
+        public string Email { set;private get; } = "";
 
         public Pessoa(string nome,string email)
         {
