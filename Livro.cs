@@ -8,25 +8,32 @@ namespace Biblioteca
 {
     public class Livro
     {
-        private int Id {  get; set; }
+        public int Id {  get; private set; }
 
-        private string Titulo { get; set; } = "";
+        public string Titulo { get;private set; } = "";
 
-        private string Autor { get; set; } = "";
+        public string Autor { get;private set; } = "";
 
-        private int AnoPublicacao { get; set; }
+        public int AnoPublicacao { get;private set; }
 
-        private string Isbn { get; set; } = "";
+        public string Isbn { get;private set; } = "";
 
-        private bool Status { get; set; } = true;
+        public bool Disponivel { get;private set; } = false;
 
-        public Livro(string titulo,string autor,int anoPublicacao,string isbn,bool status)
+        public Bibliotecario BibliotecarioLivro { get; set; }
+
+        public Emprestimo EmprestimoLivro { get; set; }
+
+        public Livro(string titulo,string autor,int anoPublicacao,string isbn,
+            bool disponivel,Emprestimo emprestimo, Bibliotecario biblioteca)
         {
             Titulo = titulo;
             Autor = autor;
             AnoPublicacao = anoPublicacao;
             Isbn = isbn;
-            Status = status;    
+            Disponivel = disponivel; 
+            EmprestimoLivro = emprestimo;
+            BibliotecarioLivro = biblioteca;
         }
 
 
@@ -35,23 +42,29 @@ namespace Biblioteca
             return $"{Titulo}-{Autor}-{AnoPublicacao}-{Isbn}";
         }
 
-        public Bibliotecario Bibliotecario { get; set; }
-
-        public Emprestimo Emprestimo { get; set; }
-
 
         public bool MarcarComoEmprestado()
         {
-            Status = false;
+           if(Disponivel == false)
+            {
+                Console.WriteLine("Livro indisponivel");
+            }
+            else
+            {
+                Disponivel = true;
+            }
 
-            return Status;
+           return Disponivel;
         }
 
         public bool MarcarComoDevolvido()
         {
-            Status = true;
+            if(Disponivel == true)
+            {
+                Disponivel=false;
+            }
 
-            return Status;
+            return false;
         }
 
     }
