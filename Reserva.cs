@@ -29,5 +29,10 @@ namespace Biblioteca
             Console.WriteLine("Reserva cancelada");
 
         }
+
+        public override string ToString()
+        {
+            return $"{Aluno}-{Livro}";
+        }
     }
 }
