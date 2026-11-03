@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Biblioteca
 {
@@ -18,22 +16,19 @@ namespace Biblioteca
 
         public string Isbn { get;private set; } = "";
 
-        public bool Disponivel { get;private set; } = false;
+        public bool Disponivel { get;private set; } = true;
 
         public Bibliotecario BibliotecarioLivro { get; set; }
 
-        public Emprestimo EmprestimoLivro { get; set; }
+        public List<Emprestimo> EmprestimoLivro { get;private set; }
 
-        public Livro(string titulo,string autor,int anoPublicacao,string isbn,
-            bool disponivel,Emprestimo emprestimo, Bibliotecario biblioteca)
+    public Livro(string titulo,string autor,int anoPublicacao,string isbn)
         {
             Titulo = titulo;
             Autor = autor;
             AnoPublicacao = anoPublicacao;
             Isbn = isbn;
-            Disponivel = disponivel; 
-            EmprestimoLivro = emprestimo;
-            BibliotecarioLivro = biblioteca;
+            EmprestimoLivro = new List<Emprestimo>();
         }
 
 
@@ -45,19 +40,38 @@ namespace Biblioteca
 
         public bool MarcarComoEmprestado()
         {
-
-            Disponivel = false;
-
-           return Disponivel;
+            if (VerificarStatusLivro() == true)
+            {
+                Disponivel = false;
+                return true;
+            }
+                return false;
+            
+               
+           
         }
 
         public bool MarcarComoDevolvido()
         {
-            Disponivel = true;
-          
-
-            return Disponivel;
+            if (VerificarStatusLivro() == false)
+            {
+                Disponivel = true;
+                return true;
+            }
+                return false;
+           
         }
 
+        public bool VerificarStatusLivro()
+        {
+            if(Disponivel == false)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
 }
