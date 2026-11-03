@@ -9,9 +9,9 @@ namespace Biblioteca
 {
     public class Reserva
     {
-        private int IdReserva {  get; set; }        
-        private DateTime DataReserva { get; set; }
-        private string Status {  get; set; }
+        public int IdReserva {  get;private set; }        
+        public DateTime DataReserva { get;private set; }
+        public string Status {  get;private set; }
 
         public Aluno Aluno { get; private set; }
 

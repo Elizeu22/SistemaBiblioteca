@@ -8,12 +8,14 @@ namespace Biblioteca
 {
     public class Emprestimo
     {
-        private int Id {  get; set; }
-        private DateTime DataEmprestimo { get; set; }   
-        private DateTime DataDevolucaoPrevista { get; set; }
-        private DateTime DataDevolucaoReal {  get; set; }
+        public int Id {  get;private set; }
+        public DateTime DataEmprestimo { get;private set; }   
+        public DateTime DataDevolucaoPrevista { get;private set; }
+        public DateTime DataDevolucaoReal {  get;private set; }
 
-        private string Status {  get; set; }
+        public string Status {  get;private set; }
+
+        public List<Reserva> ReservaLivro { get; private set; }
 
         public Emprestimo(int id, DateTime dataEmprestimo, DateTime dataDevolucaoPrevista, DateTime dataDevolucaoReal, string status)
         {
@@ -22,6 +24,7 @@ namespace Biblioteca
             this.DataDevolucaoPrevista = dataDevolucaoPrevista;
             this.DataDevolucaoReal = dataDevolucaoReal;
             this.Status = status;
+            ReservaLivro = new List<Reserva>();
         }
 
         public void RegistrarDevolucao()

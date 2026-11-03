@@ -8,8 +8,8 @@ namespace Biblioteca
 {
     public class Aluno: Pessoa
     {
-        private string Matricula { get; set; } = "";
-        private DateTime DataCadastro { get; set; }
+        public string Matricula { get;private set; } = "";
+        public DateTime DataCadastro { get; set; }
 
         public Aluno(string nome,string email,string matricula) :base(nome, email)
         {

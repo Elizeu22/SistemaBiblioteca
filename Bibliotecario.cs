@@ -8,7 +8,7 @@ namespace Biblioteca
 {
     public class Bibliotecario:Pessoa
     {
-        private string Credencial { get; set; } = "";
+        public string Credencial { get;private set; } = "";
 
         public Bibliotecario(string nome,string email,string credencial) : base(nome, email)
         {

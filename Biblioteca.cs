@@ -8,20 +8,26 @@ namespace Biblioteca
 {
     public class Biblioteca
     {
-        private string Nome {  get; set; }
-        private string Endereco { get; set; }
+        public string Nome {  get; private set; }
+        public string Endereco { get;private set; }
 
-        private string Telefone { get; set; }
+        public string Telefone { get;private set; }
+
+        public List<Emprestimo> EmprestimoLivros { get; private set; }
+
+        public List<Livro> Livros { get; private set; }
 
         public Biblioteca(string nome,string endereco,string telefone)
         {
             this.Nome = nome;    
             this.Endereco = endereco;
             this.Telefone = telefone;
+            EmprestimoLivros = new List<Emprestimo>();
+            Livros = new List<Livro>();
 
         }
 
-        public Emprestimo Emprestimo { get; set; }
+   
 
         public void AdicionarLivro(Livro livro)
         {

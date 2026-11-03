@@ -22,12 +22,13 @@ namespace Biblioteca
 
         public List<Emprestimo> EmprestimoLivro { get;private set; }
 
+
     public Livro(string titulo,string autor,int anoPublicacao,string isbn)
         {
-            Titulo = titulo;
-            Autor = autor;
-            AnoPublicacao = anoPublicacao;
-            Isbn = isbn;
+            this.Titulo = titulo;
+            this.Autor = autor;
+            this.AnoPublicacao = anoPublicacao;
+            this.Isbn = isbn;
             EmprestimoLivro = new List<Emprestimo>();
         }
 
