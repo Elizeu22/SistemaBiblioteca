@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Biblioteca
 {
     public class Reserva
     {
         public int IdReserva {  get;private set; }        
+
         public DateTime DataReserva { get;private set; }
+
         public string Status {  get;private set; }
 
         public Aluno Aluno { get; private set; }
