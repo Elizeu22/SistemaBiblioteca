@@ -45,26 +45,18 @@ namespace Biblioteca
 
         public bool MarcarComoEmprestado()
         {
-           if(Disponivel == false)
-            {
-                Console.WriteLine("Livro indisponivel");
-            }
-            else
-            {
-                Disponivel = true;
-            }
+
+            Disponivel = false;
 
            return Disponivel;
         }
 
         public bool MarcarComoDevolvido()
         {
-            if(Disponivel == true)
-            {
-                Disponivel=false;
-            }
+            Disponivel = true;
+          
 
-            return false;
+            return Disponivel;
         }
 
     }
