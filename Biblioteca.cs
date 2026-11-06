@@ -27,15 +27,11 @@ namespace Biblioteca
 
    
 
-        public void AdicionarLivro(string addLivro)
+        public void AdicionarLivro(Livro livro)
         {
 
-            var list = new List<Livro>();
+            Livros.Add(livro);
 
-            foreach (var livro in list)
-            {
-                list.Add(livro);
-            }
 
         }
 
@@ -54,37 +50,17 @@ namespace Biblioteca
         }
 
 
-        public void BuscarLivro(int livroId)
+        public Livro? BuscarLivro(int livroId)
         {
-            Livro? livroBuscar = Livros.FirstOrDefault(l => l.Id == livroId);
+           return Livros.FirstOrDefault(l => l.Id == livroId);
 
-            if (livroBuscar != null)
-            {
-                Livros.FirstOrDefault(livroBuscar);
-
-                foreach(var livro in Livros)
-                {
-                    Console.WriteLine(livro);
-                }
-            }
-            else
-            {
-                Console.WriteLine("Livro nao localizado");
-            }
+         
         }
 
 
-        public List<Livro> ListarLivros(int livroId)
+        public List<Livro> ListarLivros()
         {
-            // FUNÇAO PARA BUSCAR LIVROS BASE DE DADOS 
-            var list = new List<Livro>();
-
-            foreach (var livro in list)
-            {
-                Console.WriteLine(livro);
-            }
-
-            return list;
+            return Livros.ToList();
         }
     }
 }
