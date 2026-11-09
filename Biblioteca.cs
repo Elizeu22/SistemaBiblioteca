@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Biblioteca
 {
-    public class Biblioteca
+    public class BibliotecaApp
     {
         public string Nome {  get; private set; }
         public string Endereco { get;private set; }
@@ -15,7 +15,7 @@ namespace Biblioteca
 
         public List<Livro> Livros { get; private set; }
 
-        public Biblioteca(string nome,string endereco,string telefone)
+        public BibliotecaApp(string nome,string endereco,string telefone)
         {
             this.Nome = nome;    
             this.Endereco = endereco;
