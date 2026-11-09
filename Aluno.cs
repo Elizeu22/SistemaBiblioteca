@@ -16,9 +16,6 @@ namespace Biblioteca
 
         public List<Emprestimo> Emprestar { get; private set; }
 
-        /// FALTA IMPLEMENTAR A FUNÇÃO PEGARLIVROS()
-        /// 
-
 
         public void PegarLivro(Emprestimo emprestimo)
         {
