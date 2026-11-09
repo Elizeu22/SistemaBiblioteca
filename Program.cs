@@ -12,6 +12,22 @@ Emprestimo emprestimo = new Emprestimo(12,
 
 BibliotecaApp bibliotecaApp = new BibliotecaApp("Apostive","Rua Alvarenga","11-5845-5589");
 
+
+//Reserva reserva = new Reserva(aluno.Nome,livro.Autor);
+
+Bibliotecario bibliotecario = new Bibliotecario("Alves","alves@hotmail.com","548787");
+
+Console.WriteLine($"Bibliotecario: {bibliotecario.Nome}");
+Console.WriteLine($"Email: {bibliotecario.Email}");
+Console.WriteLine($"Credencial: {bibliotecario.Credencial}");
+
+
+
+Console.WriteLine("--------------------------------------------------------------------------");
+
+
+
+
 Console.WriteLine($"Biblioteca: {bibliotecaApp.Nome}");
 Console.WriteLine($"Endereço biblioteca: {bibliotecaApp.Endereco}");
 Console.WriteLine($"Telefone biblioteca: {bibliotecaApp.Telefone}");
