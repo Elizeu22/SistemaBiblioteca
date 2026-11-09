@@ -14,11 +14,8 @@ namespace Biblioteca
 
         List<Reserva> reservaLivros = new List<Reserva>();
 
+        public List<Livro> Livros { get; private set; }
 
 
-
-        // FALTA IMPLEMENTAR CADASTRAR LIVRO
-
-        // FALTA IMPLEMENTAR REMOVER LIVRO
     }
 }

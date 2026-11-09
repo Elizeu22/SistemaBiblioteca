@@ -29,10 +29,7 @@ namespace Biblioteca
 
         public void AdicionarLivro(Livro livro)
         {
-
             Livros.Add(livro);
-
-
         }
 
         public void RemoverLivro(int livro)

@@ -8,7 +8,7 @@ namespace Biblioteca
     {
         public int Id {  get; private set; }
 
-        public string Titulo { get;private set; } = "";
+        public string Titulo { get; set; } = "";
 
         public string Autor { get;private set; } = "";
 

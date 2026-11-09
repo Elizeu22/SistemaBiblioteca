@@ -8,9 +8,9 @@ namespace Biblioteca
         public int Id { private set; get; } = 0;
 
 
-        public string Nome { set; private get; } = "";
+        public string Nome { set;  get; } = "";
 
-        public string Email { set;private get; } = "";
+        public string Email { set; get; } = "";
 
         public Pessoa(string nome,string email)
         {

@@ -34,11 +34,6 @@ namespace Biblioteca
         }
 
 
-        public void Cancelar()
-        {
-            Console.WriteLine("Emprestimo cancelado");
-        }
-
         public Decimal CalcularMulta()
         {
             TimeSpan date = DataDevolucaoReal.Subtract(DataDevolucaoPrevista);
@@ -46,6 +41,11 @@ namespace Biblioteca
 
             return dias * 1;
 
+        }
+
+        public override string ToString()
+        {
+            return $"{DataEmprestimo}-{DataDevolucaoReal}-{DataDevolucaoReal}-{Status}";
         }
     }
 }
