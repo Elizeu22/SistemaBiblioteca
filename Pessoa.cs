@@ -5,17 +5,17 @@ namespace Biblioteca
 {
     public abstract class Pessoa
     {
-        public int Id { private set; get; } = 0;
+        public int Id {  get;private set; } = 0;
 
 
-        public string Nome { set;  get; } = "";
+        public string Nome { get; private set; } = "";
 
-        public string Email { set; get; } = "";
+        public string Email { get;private set; } = "";
 
         public Pessoa(string nome,string email)
         {
-            this.Nome = nome;   
-            this.Email = email; 
+            Nome = nome;   
+            Email = email; 
         }
 
 

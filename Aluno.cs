@@ -7,14 +7,14 @@ namespace Biblioteca
     public class Aluno: Pessoa
     {
         public string Matricula { get;private set; } = "";
-        public DateTime DataCadastro { get; set; }
+        public DateTime DataCadastro { get;private set; }
 
         public Aluno(string nome,string email,string matricula) :base(nome, email)
         {
             Matricula = matricula;
         }
 
-        public List<Emprestimo> Emprestar { get; private set; }
+        public List<Emprestimo> Emprestar { get; private set; } 
 
 
         public void PegarLivro(Emprestimo emprestimo)

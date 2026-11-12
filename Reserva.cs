@@ -15,10 +15,12 @@ namespace Biblioteca
 
         public Livro Livro { get; private set; }
 
-        public Reserva(Aluno aluno, Livro livro)
+        public Reserva(DateTime dataReserva, string status,Aluno aluno, Livro livro)
         {
-            this.Aluno = aluno;
-            this.Livro = livro;
+            Aluno = aluno;
+            Livro = livro;
+            DataReserva = dataReserva;
+            Status = status;
           
         }
 

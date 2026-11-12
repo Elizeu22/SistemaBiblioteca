@@ -10,6 +10,8 @@ namespace Biblioteca
         public Bibliotecario(string nome,string email,string credencial) : base(nome, email)
         {
             Credencial = credencial;
+            nome = nome;
+            email = email;
         }
 
         List<Reserva> reservaLivros = new List<Reserva>();

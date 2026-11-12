@@ -30,7 +30,10 @@ namespace Biblioteca
             Console.WriteLine($"Livro ID:{Id}");
             Console.WriteLine($"Data emprestimo:{DataEmprestimo}");
             Console.WriteLine($"Data devolucao:{DataDevolucaoReal}");
+
+            Status = "Devolvido";
             Console.WriteLine($"Status:{Status}");
+
         }
 
 

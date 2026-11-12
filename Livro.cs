@@ -8,7 +8,7 @@ namespace Biblioteca
     {
         public int Id {  get; private set; }
 
-        public string Titulo { get; set; } = "";
+        public string Titulo { get; private set; } = "";
 
         public string Autor { get;private set; } = "";
 
@@ -18,7 +18,7 @@ namespace Biblioteca
 
         public bool Disponivel { get;private set; } = true;
 
-        public Bibliotecario BibliotecarioLivro { get; set; }
+        public Bibliotecario BibliotecarioLivro { get; private set; }
 
         public List<Emprestimo> EmprestimoLivro { get;private set; }
 
